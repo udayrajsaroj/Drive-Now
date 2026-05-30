@@ -64,21 +64,21 @@ The core innovation of Drive Now is its **QR-Verified Authorization Pipeline**: 
 ## 🏗 System Architecture
 
 ```
-┌─────────────────────────────────────────────────────────┐
+┌──────────────────────────────────────────────────────────┐
 │                    FRONTEND (React.js)                   │
-│  ┌──────────┐  ┌──────────────┐  ┌───────────────────┐  │
+│  ┌───────────┐  ┌──────────────┐  ┌───────────────────┐  │
 │  │ Customer  │  │   Admin      │  │  QR Scanner View  │  │
 │  │ Dashboard │  │  Dashboard   │  │  (Verification)   │  │
 │  └─────┬─────┘  └──────┬───────┘  └────────┬──────────┘  │
-│        └────────────────┼───────────────────┘            │
+│        └───────────────┼───────────────────┘             │
 │                    Axios HTTP                            │
-└────────────────────────┬────────────────────────────────┘
+└────────────────────────┬─────────────────────────────────┘
                          │ REST API
 ┌────────────────────────┼────────────────────────────────┐
-│                BACKEND (Node.js + Express.js)            │
+│               BACKEND (Node.js + Express.js)            │
 │  ┌──────────┐  ┌──────────────┐  ┌───────────────────┐  │
-│  │   Auth    │  │   Booking    │  │   Payment Engine  │  │
-│  │ Middleware│  │   Engine     │  │  (Razorpay API)   │  │
+│  │   Auth   │  │   Booking    │  │   Payment Engine  │  │
+│  │Middleware│  │   Engine     │  │  (Razorpay API)   │  │
 │  │  (JWT)   │  │              │  │                   │  │
 │  └──────────┘  └──────────────┘  └───────────────────┘  │
 │  ┌──────────┐  ┌──────────────┐  ┌───────────────────┐  │
@@ -88,7 +88,7 @@ The core innovation of Drive Now is its **QR-Verified Authorization Pipeline**: 
 └────────────────────────┬────────────────────────────────┘
                          │ Mongoose ODM
 ┌────────────────────────┼────────────────────────────────┐
-│                    DATABASE (MongoDB)                     │
+│                  DATABASE (MongoDB)                     │
 │  ┌──────────┐  ┌──────────────┐  ┌───────────────────┐  │
 │  │   User   │  │   Vehicle    │  │    Booking        │  │
 │  │Collection│  │  Collection  │  │   Collection      │  │
