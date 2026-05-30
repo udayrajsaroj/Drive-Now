@@ -248,13 +248,13 @@ Total Rental Cost = (Price Per Day × Total Days) + Security Deposit
    Backend:
    ```bash
    cd backend
-   npm start
+   npm run dev
    ```
 
    Frontend:
    ```bash
    cd frontend
-   npm start
+   npm run dev
    ```
 
 6. **Access the application**
